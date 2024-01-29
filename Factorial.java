@@ -1,22 +1,22 @@
-// Java Program to Find Factorial of a Number
+import java.util.Scanner;
 
-import java.io.*;
-import java.util.*;
+class Factorial {
 
-static class Factorial {
+    static int factorial(int n) {
+        if (n <= 1)
+            return 1;
+        else {
+            return n * factorial(n - 1);
+        }
+    }
 
- int factorial(int n)
-	{
-		if (n == 1)
-			return 1;
-else{
-		return n * factorial(n - 1);
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number :");
+        int a = sc.nextInt();
 
-	public static void main(String[] args)
-	{
-		int ans = factorial(5);
 
-		System.out.println("Factorial of 5 is :" + ans);
-	}
+        System.out.println("Factorial of " + a + " is : " + factorial(a));
+    }
 }
+
